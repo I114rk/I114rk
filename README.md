@@ -17,4 +17,6 @@
 
 ---
 
+<url>https://img.shields.io/badge/Kubuntu-0079C1?style=for-the-badge&logo=kubuntu&logoColor=white</url>
+
 ### Мои проекты (My Pinned Repos)
