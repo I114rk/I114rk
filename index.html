@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team 114 | I114rk Profile</title>
+    <!-- Загрузка Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Загрузка шрифта Rubik -->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Иконки (для использования в бейджах и ссылках) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /* Основной стиль: Фонт Rubik, темно-фиолетовый фон */
+        :root {
+            --color-primary: #f9a8d4; /* Светло-розовый */
+            --color-secondary: #c084fc; /* Лавандовый/Фиолетовый */
+            --color-dark: #1f1d36; /* Темный фон */
+            --color-card: #2d2b4f; /* Фон карточек */
+        }
+        
+        body {
+            font-family: 'Rubik', sans-serif;
+            background-color: var(--color-dark);
+            color: #e0e0e0; /* Светлый текст */
+        }
+        
+        /* Стилизация для лучшего внешнего вида */
+        .card {
+            background-color: var(--color-card);
+            border: 1px solid rgba(192, 132, 252, 0.2);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Активная вкладка */
+        .tab-active {
+            color: var(--color-primary);
+            border-bottom: 2px solid var(--color-primary);
+        }
+        
+        /* Стили для ссылок и кнопок */
+        .link-accent {
+            color: var(--color-primary);
+            transition: color 0.2s;
+        }
+        .link-accent:hover {
+            color: var(--color-secondary);
+        }
+
+        /* Стиль для секции-подвала (подбородок) */
+        .footer-chin {
+            background-color: #1a182f; /* Еще более темный оттенок */
+            color: #d1d5db;
+        }
+
+        /* Переопределение стилей для содержимого README */
+        .readme-content h1 { font-size: 2.25rem; margin-bottom: 1rem; color: var(--color-primary); }
+        .readme-content h2 { font-size: 1.75rem; margin-top: 2rem; margin-bottom: 0.75rem; color: var(--color-secondary); border-bottom: 1px solid rgba(192, 132, 252, 0.1); padding-bottom: 0.25rem; }
+        .readme-content h3 { font-size: 1.5rem; margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--color-primary); }
+        .readme-content ul { list-style-type: disc; margin-left: 1.5rem; padding-left: 0.5rem; }
+        .readme-content li { margin-bottom: 0.5rem; }
+        
+        /* Для бейджей и статистики (чтобы они были центрированы) */
+        .badge-container img {
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .stats-card {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Цветовая палитра для новостей */
+        .border-pink { border-left-color: #ec4899; }
+        .border-purple { border-left-color: #9333ea; }
+        .border-gray { border-left-color: #6b7280; }
+
+        /* Стиль для превью YouTube (для мок-данных) */
+        .youtube-thumb {
+            position: relative;
+            overflow: hidden;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            border-radius: 0.5rem;
+        }
+        .youtube-thumb-placeholder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: white;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased">
+
+    <!-- Header / Шапка -->
+    <header class="bg-gray-900 shadow-lg sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row md:items-center md:justify-between">
+            <!-- Логотип/Заголовок -->
+            <div class="flex items-center space-x-4 mb-4 md:mb-0">
+                <img src="https://avatars.githubusercontent.com/u/218091290?v=4" alt="Аватар I114rk" class="w-12 h-12 rounded-full ring-2 ring-pink-500 shadow-xl">
+                <h1 class="text-3xl font-bold text-white tracking-wider">Team 114</h1>
+            </div>
+
+            <!-- Навигация -->
+            <nav id="nav-tabs" class="flex space-x-6 text-sm sm:text-base font-medium">
+                <button data-tab="home" class="tab-button tab-active p-2 hover:text-pink-400 transition">Главная</button>
+                <button data-tab="github" class="tab-button p-2 hover:text-pink-400 transition">GitHub</button>
+                <button data-tab="youtube" class="tab-button p-2 hover:text-pink-400 transition">YouTube</button>
+                <button data-tab="news" class="tab-button p-2 hover:text-pink-400 transition">Новости</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content / Основное содержимое -->
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        
+        <!-- Tab: Главная / Home (Содержимое README) -->
+        <section data-tab-content="home" class="readme-content">
+            <div class="card p-6 md:p-10 rounded-xl">
+                <!-- Заголовок -->
+                <h1>Привет разработчики и разработчицы 👋</h1>
+
+                <p class="text-lg mb-6">
+                    Я — 12-летний создатель программ из России. Я обожаю кошек и пасхалки!
+                </p>
+
+                <p class="text-xl font-semibold text-pink-400 mb-2">
+                    Я являюсь администратором Team114 и пишу в основном на:
+                </p>
+                <ul class="list-disc list-inside mb-6 ml-0">
+                    <li class="font-mono">🐍 **Python**</li>
+                    <li class="font-mono">#️⃣ **C#**</li>
+                </ul>
+
+                <hr class="border-gray-700 my-8">
+
+                <!-- Бейджи -->
+                <h2>Бейджи и технологии</h2>
+                <div class="flex flex-wrap items-center badge-container mt-4 mb-6">
+                    <!-- ОС и IDE -->
+                    <img src="https://img.shields.io/badge/Kubuntu-0079C1?style=for-the-badge&logo=kubuntu&logoColor=white" alt="Kubuntu Badge" class="rounded-lg"/>
+                    <img src="https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white" alt="VS Code Badge" class="rounded-lg"/>
+                    <!-- Языки -->
+                    <img src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white" alt="C# Badge" class="rounded-lg"/>
+                    <img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue" alt="Python Badge" class="rounded-lg"/>
+                </div>
+                
+                <hr class="border-gray-700 my-8">
+
+                <!-- Личные данные -->
+                <h2>Немного обо мне 🐈🥚</h2>
+                <ul class="list-disc list-outside space-y-2 mt-4">
+                    <li>**Дата и место рождения:** 1 ноября 2013 года, город Волгодонск, РФ.</li>
+                    <li>**Любимые операционные системы:** Kubuntu 25.04 и Windows 11 Home.</li>
+                    <li>**Интересы:** Программирование, конечно, а также поиск и создание пасхалок.</li>
+                    <li>**Статус:** Юный разработчик, стремящийся к новым знаниям!</li>
+                </ul>
+                
+                <hr class="border-gray-700 my-8">
+                
+                <!-- Статистика GitHub -->
+                <h2 class="text-center">Моя статистика на GitHub</h2>
+                <div class="stats-card mt-4 mb-6">
+                    <!-- Замените I114rk на ваш актуальный логин, если он изменится -->
+                    <img src="https://github-readme-stats.vercel.app/api?username=I114rk&show_icons=true&theme=tokyonight&hide_border=true" alt="GitHub Stats" class="w-full rounded-lg shadow-xl" onerror="this.onerror=null; this.src='https://placehold.co/400x150/2d2b4f/c084fc?text=Ошибка+загрузки+статистики';" />
+                </div>
+                
+                <!-- Проекты -->
+                <h2>Мои проекты (My Pinned Repos)</h2>
+                <p class="text-gray-400 italic">Пока что тут пусто</p>
+            </div>
+        </section>
+
+        <!-- Tab: GitHub (Будет заполнен JS) -->
+        <section data-tab-content="github" class="hidden">
+            <div class="card p-6 rounded-xl">
+                <h2 class="text-2xl font-bold text-pink-400 mb-6">Последние проекты и коммиты</h2>
+                <div id="github-content" class="space-y-4">
+                    <!-- Здесь будут загружены данные из git.json -->
+                    <p class="text-gray-400">Загрузка данных...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tab: YouTube (Будет заполнен JS) -->
+        <section data-tab-content="youtube" class="hidden">
+            <div class="card p-6 rounded-xl">
+                <h2 class="text-2xl font-bold text-pink-400 mb-6">Мои видео на YouTube</h2>
+                <div id="youtube-content" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Здесь будут загружены данные из yt.json -->
+                    <p class="text-gray-400">Загрузка данных...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tab: Новости (Будет заполнен JS) -->
+        <section data-tab-content="news" class="hidden">
+            <div class="card p-6 rounded-xl">
+                <h2 class="text-2xl font-bold text-pink-400 mb-6">Новости из моего кода</h2>
+                <div id="news-content" class="space-y-6">
+                    <!-- Здесь будут загружены данные из news.json -->
+                    <p class="text-gray-400">Загрузка данных...</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer / Подвал ("Подбородок") -->
+    <footer class="footer-chin mt-12 py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-lg font-semibold mb-3">Связь со мной (Connect with me)</p>
+            <div class="flex flex-wrap justify-center space-x-6 text-xl">
+                <a href="mailto:mail.114.com@yandex.com" class="link-accent flex items-center" target="_blank">
+                    <i class="fas fa-envelope mr-1"></i> mail.114.com@yandex.com
+                </a>
+                <a href="https://t.me/@ya_i114rk" class="link-accent flex items-center" target="_blank">
+                    <i class="fab fa-telegram-plane mr-1"></i> Telegram (личный)
+                </a>
+                <a href="https://t.me/@kruzhechka_dev" class="link-accent flex items-center" target="_blank">
+                    <i class="fab fa-telegram-plane mr-1"></i> Telegram (канал)
+                </a>
+            </div>
+            <p class="text-sm text-gray-500 mt-4">&copy; 2025 Team 114. Разработано с любовью к кошкам и коду.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabs = document.querySelectorAll('.tab-button');
+            const contents = document.querySelectorAll('[data-tab-content]');
+            const initialTab = 'home';
+
+            // --- 1. ФУНКЦИЯ ЗАГРУЗКИ ДАННЫХ ---
+            async function loadData(url) {
+                try {
+                    const response = await fetch(url);
+                    if (!response.ok) {
+                        throw new Error(`Не удалось загрузить данные из ${url}. Статус: ${response.status}`);
+                    }
+                    return await response.json();
+                } catch (error) {
+                    console.error("Ошибка загрузки данных:", error);
+                    return null;
+                }
+            }
+
+            // --- 2. ФУНКЦИЯ РЕНДЕРИНГА НОВОСТЕЙ ---
+            function renderNews(data) {
+                const container = document.getElementById('news-content');
+                container.innerHTML = '';
+                if (!data || data.length === 0) {
+                    container.innerHTML = '<p class="text-gray-400">Пока нет свежих новостей.</p>';
+                    return;
+                }
+
+                data.forEach(item => {
+                    const colorClass = item.color ? `border-${item.color}` : 'border-purple-500';
+                    const newsItem = `
+                        <div class="p-5 bg-gray-800 rounded-lg border-l-4 ${colorClass}">
+                            <p class="text-xs text-gray-400 mb-1">${item.date}</p>
+                            <p class="font-medium text-white mb-2">${item.title}</p>
+                            <p class="text-sm text-gray-300">${item.content}</p>
+                        </div>
+                    `;
+                    container.innerHTML += newsItem;
+                });
+            }
+
+            // --- 3. ФУНКЦИЯ РЕНДЕРИНГА YOUTUBE ---
+            function renderYouTube(data) {
+                const container = document.getElementById('youtube-content');
+                container.innerHTML = '';
+                if (!data || data.length === 0) {
+                    container.innerHTML = '<p class="text-gray-400">Пока нет новых видео.</p>';
+                    return;
+                }
+                
+                // Установка цветов для мок-данных
+                const getTextColor = (bgColor) => {
+                    // Простая логика для контраста
+                    return ['#3730a3', '#10b981'].includes(bgColor) ? 'text-white' : 'text-gray-900';
+                };
+
+                data.forEach(item => {
+                    const itemHtml = `
+                        <a href="${item.link}" target="_blank" class="block p-4 bg-gray-800 rounded-xl hover:bg-gray-700 transition card">
+                            <div class="youtube-thumb mb-3 shadow-lg" style="background-color: ${item.thumb_bg};">
+                                <div class="youtube-thumb-placeholder ${getTextColor(item.thumb_bg)}">
+                                    ${item.thumb_text}
+                                    <i class="fas fa-play-circle text-4xl absolute opacity-75"></i>
+                                </div>
+                            </div>
+                            <p class="font-semibold text-white mt-1">${item.title}</p>
+                            <p class="text-sm text-pink-300">${item.date}</p>
+                        </a>
+                    `;
+                    container.innerHTML += itemHtml;
+                });
+            }
+
+            // --- 4. ФУНКЦИЯ РЕНДЕРИНГА GITHUB ---
+            function renderGitHub(data) {
+                const container = document.getElementById('github-content');
+                container.innerHTML = '';
+                if (!data || data.length === 0) {
+                    container.innerHTML = '<p class="text-gray-400">Пока нет новых проектов или коммитов.</p>';
+                    return;
+                }
+
+                data.forEach(item => {
+                    const itemHtml = `
+                        <div class="p-4 bg-gray-800 rounded-lg border-l-4 border-purple-400 hover:bg-gray-700 transition">
+                            <a href="${item.link}" target="_blank" class="font-semibold text-white hover:text-pink-400 transition">${item.name}</a>
+                            <p class="text-sm text-gray-400">${item.date}: ${item.description}</p>
+                        </div>
+                    `;
+                    container.innerHTML += itemHtml;
+                });
+            }
+
+            // --- 5. ФУНКЦИЯ ЗАПУСКА РЕНДЕРИНГА (для всех вкладок) ---
+            async function loadTabContent(tabName) {
+                switch (tabName) {
+                    case 'news':
+                        const newsData = await loadData('news.json');
+                        renderNews(newsData);
+                        break;
+                    case 'youtube':
+                        const ytData = await loadData('yt.json');
+                        renderYouTube(ytData);
+                        break;
+                    case 'github':
+                        const gitData = await loadData('git.json');
+                        renderGitHub(gitData);
+                        break;
+                }
+            }
+
+            // --- 6. ОБРАБОТЧИКИ ВКЛАДОК ---
+            function showTab(tabName) {
+                // ... (логика переключения классов остается прежней)
+                contents.forEach(content => {
+                    content.classList.add('hidden');
+                });
+                tabs.forEach(tab => {
+                    tab.classList.remove('tab-active');
+                    tab.classList.add('text-gray-400');
+                    tab.classList.remove('text-pink-400');
+                });
+
+                const activeContent = document.querySelector(`[data-tab-content="${tabName}"]`);
+                if (activeContent) {
+                    activeContent.classList.remove('hidden');
+                    // Загружаем данные только для вкладок, которым это нужно
+                    if (tabName !== 'home') {
+                        loadTabContent(tabName);
+                    }
+                }
+                
+                const activeTabButton = document.querySelector(`.tab-button[data-tab="${tabName}"]`);
+                if (activeTabButton) {
+                    activeTabButton.classList.add('tab-active');
+                    activeTabButton.classList.remove('text-gray-400');
+                }
+            }
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', (e) => {
+                    const tabName = e.currentTarget.getAttribute('data-tab');
+                    showTab(tabName);
+                });
+            });
+
+            // Показать вкладку "Главная" при загрузке
+            showTab(initialTab);
+        });
+    </script>
+
+</body>
+</html>
