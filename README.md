@@ -16,11 +16,17 @@
 * **Статус:** Юный разработчик, стремящийся к новым знаниям!
 
 ---
-
+### Бейджи: 
 <img src="https://img.shields.io/badge/Kubuntu-0079C1?style=for-the-badge&logo=kubuntu&logoColor=white" />
 <img src="https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white" />
 
 <img src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white" />
 <img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue" />
+
+---
+
+### Моя статистика на GitHub
+
+[![GitHub Stats](https://github-readme-stats.vercel.app/api?username=I114rk&show_icons=true&theme=tokyonight&hide_border=true)](https://github.com/anuraghazra/github-readme-stats)
 
 ### Мои проекты (My Pinned Repos)
