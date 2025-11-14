@@ -30,3 +30,11 @@
 [![GitHub Stats](https://github-readme-stats.vercel.app/api?username=I114rk&show_icons=true&theme=tokyonight&hide_border=true)](https://github.com/anuraghazra/github-readme-stats)
 
 ### Мои проекты (My Pinned Repos)
+Пока что тут пусто
+
+---
+
+### Связь со мной (Connect with me)
+
+* **Email:** [mail.114.com@yandex.com](mailto:mail.114.com@yandex.com)
+* **Telegram:** [@ya_i114rk]
