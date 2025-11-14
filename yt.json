@@ -1,23 +1,9 @@
 [
   {
-    "title": "Как я написал свой первый скрипт на Python за 15 минут",
-    "link": "https://www.youtube.com/watch?v=youtube_link_1",
-    "date": "5 дней назад",
-    "thumb_bg": "#3730a3",
-    "thumb_text": "Кодинг для начинающих"
-  },
-  {
-    "title": "Обзор Kubuntu 25.04: Мой выбор ОС для кодинга",
-    "link": "https://www.youtube.com/watch?v=youtube_link_2",
-    "date": "2 недели назад",
-    "thumb_bg": "#a21caf",
-    "thumb_text": "Обзор Kubuntu 25.04"
-  },
-  {
-    "title": "Пасхалки в коде: Как их спрятать?",
-    "link": "https://www.youtube.com/watch?v=youtube_link_3",
-    "date": "1 месяц назад",
-    "thumb_bg": "#10b981",
-    "thumb_text": "Пасхалки в коде"
+    "title": "Тут пока нету видео",
+    "link": "3-я пасхалка, скоро дойдешь, подсказка: 'Цезарь из 5 элементов: сухарики, помидоры, мясо, сыр, соус цезарь'",
+    "date": "14-11-2025",
+    "thumb_bg": "#2fc5f4",
+    "thumb_text": "Тут пока нету видео"
   }
 ]
