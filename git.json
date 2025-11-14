@@ -1,24 +1,13 @@
 [
   {
-    "name": "awesome-cats-project",
-    "description": "Инициализация проекта на Python для каталогизации кошек. 🐈",
-    "link": "https://github.com/I114rk/awesome-cats-project",
-    "date": "Вчера"
+    "name": "GitHub Pages",
+    "description": "Создан сайт на GitHub Pages",
+    "link": "https://i114rk.github.io/I114rk/",
+    "date": "14.11.2025 20:13"
   },
   {
-    "name": "easteregg-finder",
-    "description": "Коммит: Исправлена ошибка в обработчике пасхалок.",
-    "link": "https://github.com/I114rk/easteregg-finder",
-    "date": "2 дня назад"
-  },
-  {
-    "name": "My_First_CSharp_App",
-    "description": "Первый релиз консольного приложения на C# (v1.0).",
-    "link": "https://github.com/I114rk/My_First_CSharp_App",
-    "date": "Неделю назад"
-  },
-  {
-    "name": "Ох не зря ты полез в код, пасхалка номер 2. А если нашел ее после первой, то вернись когда найдешь первую"
+    "name": "Пасхалка",
+    "description": "8E E5 20 AD A5 20 A7 E0 EF 20 E2 EB 20 AF AE AB A5 A7 20 A2 20 AA AE A4 2C 20 AF A0 E1 E5 A0 AB AA A0 20 AD AE AC A5 E0 20 32 2E 20 80 20 A5 E1 AB A8 20 AD A0 E8 A5 AB 20 A5 A5 20 AF AE E1 AB A5 20 AF A5 E0 A2 AE A9 2C 20 E2 AE 20 A2 A5 E0 AD A8 E1 EC 20 AA AE A3 A4 A0 20 AD A0 A9 A4 A5 E8 EC 20 AF A5 E0 A2 E3 EE"
   } 
 ]
 
