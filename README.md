@@ -39,7 +39,7 @@
 
 ## OS
 * Arch Linux стоит на SSD в 1ТБ, ставил без Archinstall, GRUB
-* Windows 10 Pro с последней обновой, только для игр, стоит на NVME 256 ГБ.
+* Windows 11 Home с последней обновой, только для игр, стоит на NVME 256 ГБ.
 
 ## Programs
 Для разработки:
